@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav navbar-right">
         {% for link in site.navbar %}
-            <li><a href="{{ link.url }}" class="btn">{{ link.text }}</a></li>
+            <li><a href="{{ link.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn">{{ link.text }}</a></li>
         {% endfor %}
         </ul>
         </div>
